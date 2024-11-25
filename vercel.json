@@ -1,13 +1,14 @@
 {
     "version": 2,
+    "buildCommand": "CI=false npm run build",
+    "installCommand": "npm install --force",
     "builds": [
       {
         "src": "package.json",
         "use": "@vercel/static-build",
         "config": { 
           "distDir": "build",
-          "installCommand": "npm install --legacy-peer-deps",
-          "buildCommand": "npm run build"
+          "zeroConfig": true
         }
       }
     ],
@@ -34,6 +35,7 @@
       }
     ],
     "env": {
-      "NPM_FLAGS": "--legacy-peer-deps"
+      "NODE_ENV": "production",
+      "CI": "false"
     }
   }
