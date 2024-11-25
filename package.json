@@ -22,15 +22,15 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/jest-dom": "^6.0.0",
-    "@testing-library/user-event": "^14.0.0",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.0.0",
     "node-sass": "^7.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=false react-scripts build",
+    "build": "npm install --legacy-peer-deps && next build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -2,16 +2,6 @@
     "version": 2,
     "buildCommand": "CI=false npm run build",
     "installCommand": "npm install --force",
-    "builds": [
-      {
-        "src": "package.json",
-        "use": "@vercel/static-build",
-        "config": { 
-          "distDir": "build",
-          "zeroConfig": true
-        }
-      }
-    ],
     "routes": [
       {
         "src": "/static/(.*)",
